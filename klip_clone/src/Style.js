@@ -2,50 +2,39 @@ import React, { useEffect, useState } from "react";
 import xx from "./assets/xx.png";
 import { ReactComponent as Klip } from "./assets/klip.svg";
 import { ReactComponent as Klay_Klip } from "./assets/klay_klip.svg";
-export function HomeHeader() {
+import hamburger from "./assets/hamburger.png";
+export function HomeHeader({ openBurger }) {
   return (
     <div
       style={{
         width: "100%",
         display: "flex",
         flexDirection: "row",
-        alignItems: "center",
+        alignContent: "flex-start",
         justifyContent: "space-between",
         backgroundColor: "#ffffff",
-        borderBottom: "1px solid #dfdfdf",
         paddingTop: 15,
         paddingBottom: 15,
+        height: "5vh",
       }}
     >
-      <div
-        style={{
-          width: 100,
-          height: 28,
-        }}
-      />
-      <div
-        style={{
-          fontSize: 24,
-          color: "#010608",
-          fontFamily: "AvenirNext",
-          textAlign: "center",
-          width: 120,
-          cursor: "pointer",
-        }}
-      >
+      <div>
+        <img
+          onClick={openBurger}
+          alt=""
+          src={hamburger}
+          style={{
+            width: 28,
+            height: 28,
+            cursor: "pointer",
+            marginLeft: 5,
+          }}
+        />
+      </div>
+      <div>
         <Klip></Klip>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "flex-end",
-
-          paddingRight: 20,
-          width: 80,
-        }}
-      >
+      <div>
         <img
           alt=""
           src={xx}
@@ -53,6 +42,7 @@ export function HomeHeader() {
             width: 28,
             height: 28,
             cursor: "pointer",
+            marginRight: 5,
           }}
         />
       </div>
@@ -67,42 +57,29 @@ export function MHomeHeader() {
         width: "100%",
         display: "flex",
         flexDirection: "row",
-        alignItems: "center",
+        alignItems: "flex-start",
         justifyContent: "space-between",
         backgroundColor: "#ffffff",
-        borderBottom: "1px solid #dfdfdf",
         paddingTop: 15,
         paddingBottom: 15,
       }}
     >
-      <div
-        style={{
-          width: "30vw",
-        }}
-      />
-      <div
-        style={{
-          fontSize: 18,
-          color: "#010608",
-          fontFamily: "AvenirNext",
-          textAlign: "center",
-          width: "30vw",
-          cursor: "pointer",
-        }}
-      >
+      <div>
+        <img
+          alt=""
+          src={hamburger}
+          style={{
+            width: 24,
+            height: 24,
+            cursor: "pointer",
+            marginLeft: 5,
+          }}
+        />
+      </div>
+      <div>
         <Klip></Klip>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "flex-end",
-
-          paddingRight: "5vw",
-          width: "25vw",
-        }}
-      >
+      <div>
         <img
           alt=""
           src={xx}
@@ -110,6 +87,7 @@ export function MHomeHeader() {
             width: 24,
             height: 24,
             cursor: "pointer",
+            marginRight: 5,
           }}
         />
       </div>

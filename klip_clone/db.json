@@ -1,0 +1,91 @@
+{
+  "token": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "owner": "정선웅",
+          "tokenName": "Klay",
+          "tokenType": "Klay",
+          "tokenSymbol": "",
+          "tokenCount": "2"
+        },
+        {
+          "id": "2",
+          "owner": "정선웅",
+          "tokenName": "Klay",
+          "tokenType": "Klay",
+          "tokenSymbol": "",
+          "tokenCount": "2"
+        },
+        {
+          "id": "3",
+          "owner": "정선웅",
+          "tokenName": "Klay",
+          "tokenType": "Klay",
+          "tokenSymbol": "",
+          "tokenCount": "2"
+        }
+      ]
+    }
+  ],
+
+  "card": [
+    {
+      "items": [
+        {
+          "owner": "",
+          "tokenId": "1234",
+          "tokenUri": "/1234.json"
+        },
+        {
+          "owner": "",
+          "tokenId": "1235",
+          "tokenUri": "/1235.json"
+        },
+        {
+          "owner": "",
+          "tokenId": "1236",
+          "tokenUri": "/1236.json"
+        },
+        {
+          "owner": "",
+          "tokenId": "1237",
+          "tokenUri": "/1237.json"
+        }
+      ]
+    }
+  ],
+
+  "friend": [
+    {
+      "items": [
+        {
+          "id": 1,
+          "nickname": "친구1",
+          "profilePicture": ""
+        },
+        {
+          "id": 2,
+          "nickname": "친구2",
+          "profilePicture": ""
+        },
+        {
+          "id": 3,
+          "nickname": "친구3",
+          "profilePicture": ""
+        },
+        {
+          "id": 4,
+          "nickname": "친구4",
+          "profilePicture": ""
+        },
+        {
+          "id": 5,
+          "nickname": "친구5",
+          "profilePicture": ""
+        }
+      ]
+    }
+  ]
+}
