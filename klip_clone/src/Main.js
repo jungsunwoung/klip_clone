@@ -90,11 +90,12 @@ export default function Main() {
     return clearTimeout(loop);
   }, [setSwiperCurrentPosition, swiperCurrentPosition]);
 
+  //
   useEffect(() => {
     swiperRef.current.style.transform =
       swiperCurrentPosition === 0
         ? `translate(000vw)`
-        : `translate(-${swiperCurrentPosition}00vw)`;
+        : `translate(-${swiperCurrentPosition * 90}vw)`;
   });
   //나의 토큰 불러오기
   function getMyToken() {
@@ -241,13 +242,14 @@ export default function Main() {
       ) : (
         <></>
       )}
+
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-start",
           position: "relative",
-          width: "100vw",
+          width: "90vw",
           minHeight: "100vh",
         }}
       >
@@ -258,6 +260,7 @@ export default function Main() {
               flexDirection: "column",
               justifyContent: "flex-start",
               overflowY: "scroll",
+              height: "85vh",
             }}
           >
             <div
@@ -310,6 +313,7 @@ export default function Main() {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
+                  justifyContent: "center",
                   marginTop: 20,
                 }}
               >
@@ -398,18 +402,18 @@ export default function Main() {
                 </div>
               </div>
               <div>Klip의 소식을 가장 먼저 받으실 수 있습니다.</div>
-              <div>
-                <img
-                  style={{
-                    width: "60vw",
-                    height: "10vw",
-                    bottom: 0,
-                    position: "fixed",
-                  }}
-                  src={top_donation}
-                ></img>
-              </div>
             </div>
+          </div>
+          <div>
+            <img
+              style={{
+                width: "60vw",
+                height: "15vh",
+                bottom: 0,
+                position: "fixed",
+              }}
+              src={top_donation}
+            ></img>
           </div>
         </Modal>
 
@@ -477,11 +481,11 @@ export default function Main() {
               transition: "transform 1s",
             }}
           >
-            <div style={{ width: "100vw", height: "20vh", display: "flex" }}>
+            <div style={{ width: "90vw", height: "20vh", display: "flex" }}>
               {bannerData.map((item) => (
                 <div key={item.id}>
                   <img
-                    style={{ width: "100vw", height: "20vh" }}
+                    style={{ width: "90vw", height: "20vh" }}
                     src={item.imageUrl}
                   ></img>
                 </div>
@@ -494,9 +498,11 @@ export default function Main() {
             display: "flex",
             justifyContent: "space-between",
             flexDirection: "row",
+            marginTop: "5vh",
+            width: "90vw",
           }}
         >
-          <div>나의 토큰</div>
+          <div style={{ fontWeight: "bold", fontSize: "3vw" }}>나의 토큰</div>
           <div> 전체보기</div>
         </div>
         <div
@@ -504,6 +510,7 @@ export default function Main() {
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
+            marginTop: "3vh",
           }}
         >
           {tokenList.map((item) => (
@@ -544,13 +551,13 @@ export default function Main() {
               height: "5vh",
               backgroundColor: "#0080ff",
               textAlign: "center",
-
+              justifyContent: "center",
               marginTop: 10,
               borderRadius: 10,
               color: "#ffffff",
             }}
           >
-            토큰 보내기
+            <div>토큰 보내기</div>
           </div>
         </div>
         <div
@@ -558,9 +565,13 @@ export default function Main() {
             display: "flex",
             justifyContent: "space-between",
             flexDirection: "row",
+            marginTop: "3vh",
+            width: "90vw",
           }}
         >
-          <div>최근 받은 카드</div>
+          <div style={{ fontWeight: "bold", fontSize: "3vw" }}>
+            최근 받은 카드
+          </div>
           <div> 전체보기</div>
         </div>
         <ScrollContainer>
@@ -579,15 +590,16 @@ export default function Main() {
               <div
                 style={{
                   backgroundColor: "rgba(0,0,0,0.4)",
-                  padding: "1.6vw",
-                  minWidth: "28vw",
-                  alignSelf: "center",
-                  textAlign: "center",
+                  height: "5vw",
+                  // minWidth: "20vw",
+                  //왜 안될까?
+                  justifyContent: "center",
+                  alignItems: "center",
                   borderRadius: 10,
                   marginTop: "25vw",
                 }}
               >
-                {item.name}
+                <div style={{}}>{item.name}</div>
               </div>
             </div>
           ))}
@@ -597,9 +609,13 @@ export default function Main() {
             display: "flex",
             justifyContent: "space-between",
             flexDirection: "row",
+            marginTop: "3vh",
+            width: "90vw",
           }}
         >
-          <div>최근 전송한 친구</div>
+          <div style={{ fontWeight: "bold", fontSize: "3vw" }}>
+            최근 전송한 친구
+          </div>
           <div> 전체보기</div>
         </div>
         <ScrollContainer>
