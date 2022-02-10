@@ -1,12 +1,16 @@
 # Klip clone coding
 =============
 1. Start
+'''
 npm run dev
+'''
 * react server : localhost:3000
 * jsonServer : localhost:8080
 
 2. Test
+'''
 npm run test
+'''
 cypress, jest (테스트 코드는 작성 안함)
 
 3. Features
