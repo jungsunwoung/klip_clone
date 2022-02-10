@@ -192,7 +192,12 @@ export default function Main() {
     setIsBurger(true);
   }
   useEffect(() => {
-    setNickname(location.state.res.profile.kakao_account.profile.nickname);
+    if (location.state) {
+      setNickname(location.state.res.profile.kakao_account.profile.nickname);
+    } else {
+      setNickname("정선웅");
+    }
+
     getMyToken();
     getRecentCard();
     getRecentFriend();
@@ -280,7 +285,7 @@ export default function Main() {
                   marginTop: 10,
                 }}
               >
-                {location.state.res.profile.kakao_account.profile.nickname}
+                {nickname}
               </div>
               <div
                 style={{

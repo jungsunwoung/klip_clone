@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "7.17.2",
+    "@babel/preset-env": "7.16.11",
     "@testing-library/jest-dom": "5.16.1",
     "@testing-library/react": "12.1.2",
     "@testing-library/user-event": "13.5.0",
+    "babel-jest": "27.5.1",
     "concurrently": "7.0.0",
+    "cypress": "9.4.1",
     "faker": "6.6.6",
+    "jest": "27.5.1",
     "json-server": "0.17.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -23,7 +28,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cypress open",
     "eject": "react-scripts eject",
     "jsonServer": "json-server --watch db.json --port 8080 --routes routes.json",
     "dev": "concurrently \"npm run start\" \" npm run jsonServer\""
